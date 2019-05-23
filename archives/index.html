@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-TW">
+<html class="theme-next pisces use-motion" lang="zh-TW">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,6 +37,10 @@
 
 
 
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
 
 
 
@@ -70,12 +74,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '7.1.1',
-    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false,"dimmer":false},
+    sidebar: {"position":"right","display":"always","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
     back2top_sidebar: false,
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -96,17 +100,17 @@
 
 
 
-  <meta name="description" content="小小工程獅">
+  <meta name="description" content="平凡的生活">
 <meta name="keywords" content="網路世界,前後端,資訊世代">
 <meta property="og:type" content="website">
-<meta property="og:title" content="小小工程獅 - 資訊世代">
+<meta property="og:title" content="小小工程獅 Blog">
 <meta property="og:url" content="https://yenin1018.github.io/archives/index.html">
-<meta property="og:site_name" content="小小工程獅 - 資訊世代">
-<meta property="og:description" content="小小工程獅">
+<meta property="og:site_name" content="小小工程獅 Blog">
+<meta property="og:description" content="平凡的生活">
 <meta property="og:locale" content="zh-TW">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小小工程獅 - 資訊世代">
-<meta name="twitter:description" content="小小工程獅">
+<meta name="twitter:title" content="小小工程獅 Blog">
+<meta name="twitter:description" content="平凡的生活">
 
 
 
@@ -124,7 +128,7 @@
   };
 </script>
 
-  <title>歸檔 | 小小工程獅 - 資訊世代</title>
+  <title>歸檔 | 小小工程獅 Blog</title>
   
 
 
@@ -182,7 +186,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-right page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -193,13 +197,13 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">小小工程獅 - 資訊世代</span>
+        <span class="site-title">小小工程獅 Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
     
       
-        <p class="site-subtitle">歡迎來到小小園地</p>
+        <p class="site-subtitle">簡單、快樂、分享</p>
       
     
     
@@ -295,28 +299,6 @@
   
 
   
-    
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
-  
 
   
 </nav>
@@ -336,6 +318,28 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
           
           <div id="content" class="content">
             
@@ -439,7 +443,7 @@
               <img class="site-author-image" itemprop="image" src="/uploads/SKY.JPG" alt="Song Rob">
             
               <p class="site-author-name" itemprop="name">Song Rob</p>
-              <div class="site-description motion-element" itemprop="description">小小工程獅</div>
+              <div class="site-description motion-element" itemprop="description">平凡的生活</div>
           </div>
 
           
@@ -524,15 +528,9 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.8.0</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主題 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.1</div>
 
 
 
@@ -553,6 +551,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -583,6 +583,8 @@
 
 
 
+  
+
 
 
 
@@ -606,6 +608,9 @@
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+
 
   
 
@@ -620,7 +625,9 @@
   
 
 
-  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
 
 
 
