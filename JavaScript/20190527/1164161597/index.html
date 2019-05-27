@@ -100,24 +100,18 @@
 
 
 
-  <meta name="description" content="前言網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧">
-<meta name="keywords" content="Cloud">
+  <meta name="description" content="前言介紹JS除錯時常用的 Console">
+<meta name="keywords" content="JS,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="圖片儲存空間">
-<meta property="og:url" content="https://yenin1018.github.io/inlife/20190524/2417988275/index.html">
+<meta property="og:title" content="實用的 Console">
+<meta property="og:url" content="https://yenin1018.github.io/JavaScript/20190527/1164161597/index.html">
 <meta property="og:site_name" content="小小工程獅 Blog">
-<meta property="og:description" content="前言網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧">
+<meta property="og:description" content="前言介紹JS除錯時常用的 Console">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:image" content="https://lh3.googleusercontent.com/YO_nc2eK75HExoRNHc63-xEHhxcFAKYoGxZxH_nSVJ0sJLPw4Z411Fy3JeK_9jtyuBRzmlwW_cIy6rVtwh4ubR3RMqPXERWi8L5cxzh4kk2Hwyvh6fn6kmJCupfsnwe2r9k5hTRz9N-Gqp7XSmhvD_vLeKW_HoiR3bU2vuGiCWaCxOQkQmhx9RfUEuDsTKWCl6VdD4Ux6xhDa9YqEGEGLLSbwz7ls6QeVnCBWEJb_6roaPrXuydD29l2rfsi_S01eq-HBiymlBFy0ABWypP4oaIf4joZNXWcHJxUYBk8AJLqnVRk4m9jtuBG4r553tepRT-AzB7dml3grr1XkLeZB_e83TLzvF8rafm47nWyFyA_V_ADthys6jw53_tBO36j04BjiL2oU0ybyn5NAOItezonH58bZDRNE9QfmyHuPDrfxISmOuy5x2kPVJ2BOsOr3ZDIfbYwMWrtiNNxwPF1EFZocijUslfbLcKqBgE6dTt1U9u7qvyY7ndQZQRq5WoSE4-3czOl0cZnok0YjukLPo9pDfOay349YN1U-iihA_xIywvZxVjSgT6eZuIf7pRIHI_oalR34ueKOpreKg-_b0pCBWkMprqFohbBFtKCLeSrWZ7uyhedzZmvym623lsWN4XW83dlEZQHiCn70Jn8j0fMlsfjiQQ=w182-h242-no">
-<meta property="og:image" content="https://drive.google.com/uc?export=view&id=1LmB_EI_NLrH8PFALkcz6Y2BpafWQ4Q8L">
-<meta property="og:image" content="https://www.dropbox.com/s/l7wy89hmqh13sw6/IMG_0244.jpg?dl=1">
-<meta property="og:image" content="https://i.imgur.com/WejszZq.png">
-<meta property="og:image" content="https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
-<meta property="og:updated_time" content="2019-05-24T15:17:13.106Z">
+<meta property="og:updated_time" content="2019-05-27T15:52:53.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="圖片儲存空間">
-<meta name="twitter:description" content="前言網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧">
-<meta name="twitter:image" content="https://lh3.googleusercontent.com/YO_nc2eK75HExoRNHc63-xEHhxcFAKYoGxZxH_nSVJ0sJLPw4Z411Fy3JeK_9jtyuBRzmlwW_cIy6rVtwh4ubR3RMqPXERWi8L5cxzh4kk2Hwyvh6fn6kmJCupfsnwe2r9k5hTRz9N-Gqp7XSmhvD_vLeKW_HoiR3bU2vuGiCWaCxOQkQmhx9RfUEuDsTKWCl6VdD4Ux6xhDa9YqEGEGLLSbwz7ls6QeVnCBWEJb_6roaPrXuydD29l2rfsi_S01eq-HBiymlBFy0ABWypP4oaIf4joZNXWcHJxUYBk8AJLqnVRk4m9jtuBG4r553tepRT-AzB7dml3grr1XkLeZB_e83TLzvF8rafm47nWyFyA_V_ADthys6jw53_tBO36j04BjiL2oU0ybyn5NAOItezonH58bZDRNE9QfmyHuPDrfxISmOuy5x2kPVJ2BOsOr3ZDIfbYwMWrtiNNxwPF1EFZocijUslfbLcKqBgE6dTt1U9u7qvyY7ndQZQRq5WoSE4-3czOl0cZnok0YjukLPo9pDfOay349YN1U-iihA_xIywvZxVjSgT6eZuIf7pRIHI_oalR34ueKOpreKg-_b0pCBWkMprqFohbBFtKCLeSrWZ7uyhedzZmvym623lsWN4XW83dlEZQHiCn70Jn8j0fMlsfjiQQ=w182-h242-no">
+<meta name="twitter:title" content="實用的 Console">
+<meta name="twitter:description" content="前言介紹JS除錯時常用的 Console">
 
 
 
@@ -125,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://yenin1018.github.io/inlife/20190524/2417988275/">
+  <link rel="canonical" href="https://yenin1018.github.io/JavaScript/20190527/1164161597/">
 
 
 
@@ -135,7 +129,7 @@
   };
 </script>
 
-  <title>圖片儲存空間 | 小小工程獅 Blog</title>
+  <title>實用的 Console | 小小工程獅 Blog</title>
   
 
 
@@ -348,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yenin1018.github.io/inlife/20190524/2417988275/">
+    <link itemprop="mainEntityOfPage" href="https://yenin1018.github.io/JavaScript/20190527/1164161597/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Rob">
@@ -365,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">圖片儲存空間
+          <h1 class="post-title" itemprop="name headline">實用的 Console
 
               
             
@@ -391,7 +385,7 @@
                 
               
 
-              <time title="創建時間：2019-05-24 20:54:30 / 修改時間：23:17:13" itemprop="dateCreated datePublished" datetime="2019-05-24T20:54:30+08:00">2019-05-24</time>
+              <time title="創建時間：2019-05-27 22:23:03 / 修改時間：23:52:53" itemprop="dateCreated datePublished" datetime="2019-05-27T22:23:03+08:00">2019-05-27</time>
             
 
             
@@ -413,7 +407,7 @@
                 <span class="post-meta-item-text">分類於</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/inlife/" itemprop="url" rel="index"><span itemprop="name">生活記事</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
 
                 
                 
@@ -448,35 +442,23 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧<br><a id="more"></a></p>
-<h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2><p>存放在Google雲端上，空間限制最多只有15GB。</p>
-<h3 id="Google-相片"><a href="#Google-相片" class="headerlink" title="Google 相片"></a>Google 相片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">點選一張圖片，按滑鼠右鍵選擇複製圖片位置即可</span><br></pre></td></tr></table></figure>
-<p><img src="https://lh3.googleusercontent.com/YO_nc2eK75HExoRNHc63-xEHhxcFAKYoGxZxH_nSVJ0sJLPw4Z411Fy3JeK_9jtyuBRzmlwW_cIy6rVtwh4ubR3RMqPXERWi8L5cxzh4kk2Hwyvh6fn6kmJCupfsnwe2r9k5hTRz9N-Gqp7XSmhvD_vLeKW_HoiR3bU2vuGiCWaCxOQkQmhx9RfUEuDsTKWCl6VdD4Ux6xhDa9YqEGEGLLSbwz7ls6QeVnCBWEJb_6roaPrXuydD29l2rfsi_S01eq-HBiymlBFy0ABWypP4oaIf4joZNXWcHJxUYBk8AJLqnVRk4m9jtuBG4r553tepRT-AzB7dml3grr1XkLeZB_e83TLzvF8rafm47nWyFyA_V_ADthys6jw53_tBO36j04BjiL2oU0ybyn5NAOItezonH58bZDRNE9QfmyHuPDrfxISmOuy5x2kPVJ2BOsOr3ZDIfbYwMWrtiNNxwPF1EFZocijUslfbLcKqBgE6dTt1U9u7qvyY7ndQZQRq5WoSE4-3czOl0cZnok0YjukLPo9pDfOay349YN1U-iihA_xIywvZxVjSgT6eZuIf7pRIHI_oalR34ueKOpreKg-_b0pCBWkMprqFohbBFtKCLeSrWZ7uyhedzZmvym623lsWN4XW83dlEZQHiCn70Jn8j0fMlsfjiQQ=w182-h242-no" alt="Google 相片"></p>
-<ul>
-<li>連結 <a href="https://www.google.com/photos/about/" target="_blank" rel="noopener">https://www.google.com/photos/about/</a></li>
-</ul>
-<h3 id="Google-雲端硬碟"><a href="#Google-雲端硬碟" class="headerlink" title="Google 雲端硬碟"></a>Google 雲端硬碟</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">小知識：</span><br><span class="line"></span><br><span class="line">如要在雲端硬碟上使用圖檔，需再此圖檔開啟共用，並開啟連結共用設定，會得到一串網址</span><br><span class="line">，網址上有 /d/21e12..e21e1.. ，在 d/ 後會有一串 ID ，將ID貼入至底下連結即可使用。</span><br><span class="line"></span><br><span class="line">或是 共用網址為 </span><br><span class="line">https://drive.google.com/open?id=1LmB_EI_Ndasda.... 即 ID 為等號後面</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://drive.google.com/uc?export=view&amp;id=&#123;id&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1LmB_EI_NLrH8PFALkcz6Y2BpafWQ4Q8L" alt="Google 雲端硬碟"></p>
-<ul>
-<li>連結 <a href="https://drive.google.com/" target="_blank" rel="noopener">https://drive.google.com/</a></li>
-</ul>
-<h3 id="FireBase"><a href="#FireBase" class="headerlink" title="FireBase"></a>FireBase</h3><p>空間相較小提供 1 Gib，但功能相當多</p>
-<ul>
-<li>連結 <a href="https://firebase.google.com/" target="_blank" rel="noopener">https://firebase.google.com/</a></li>
-</ul>
-<h2 id="DropBox"><a href="#DropBox" class="headerlink" title="DropBox"></a>DropBox</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">小知識：</span><br><span class="line">選擇圖檔案右鍵選擇共享，建立連結之後選複製連結，會看到一串網址，如下</span><br><span class="line">(https://www.dropbox.com/s/l7wy89hmqh13sw6/IMG_0244.jpg?dl=0)</span><br><span class="line"></span><br><span class="line">在最後有個`dl=0` 改為 `dl=1` 就可以顯示圖囉。</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.dropbox.com/s/l7wy89hmqh13sw6/IMG_0244.jpg?dl=1" alt="Dropbox"></p>
-<h2 id="imgur"><a href="#imgur" class="headerlink" title="imgur"></a>imgur</h2><p>是一家美國的免費圖片上傳空間，上傳圖檔上去，會附有超連結供使用，是個不錯用的網站</p>
-<p><img src="https://i.imgur.com/WejszZq.png" alt="Imgur"></p>
-<ul>
-<li>連結 <a href="https://imgur.com/" target="_blank" rel="noopener">https://imgur.com/</a></li>
-</ul>
-<h2 id="unsplash"><a href="#unsplash" class="headerlink" title="unsplash"></a>unsplash</h2><p>在 <a href="https://unsplash.com" title="unsplash" target="_blank" rel="noopener">unsplash</a> 上的圖檔都可以免費使用(商用或非商用)，如有使用疑慮也可參考授權方式 <a href="https://unsplash.com/license" target="_blank" rel="noopener">https://unsplash.com/license</a></p>
-<p><img src="https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Photo by Mi Min on Unsplash"></p>
-<ul>
-<li>連結 <a href="https://unsplash.com" target="_blank" rel="noopener">https://unsplash.com</a></li>
-</ul>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>依照個人喜好去上傳檔案吧</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>介紹JS除錯時常用的 Console<br><a id="more"></a></p>
+<h2 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h2><p>為全域 window 下的某個屬性Console。Console其是個物件(Object)，裡面有許多方法(methods)，那該如何開啟 Console呢？<br>請先打開瀏覽器(以Chrome來做示範)，<code>滑鼠右鍵檢查</code>或是 <code>在鍵盤上按下F12</code> 打開開發者工具，選擇 Console即完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//內建的 console</span><br><span class="line">window.console;</span><br><span class="line"></span><br><span class="line">window[&quot;console&quot;];</span><br><span class="line"></span><br><span class="line">window.console.log();</span><br><span class="line">console.log();//可不用寫window</span><br></pre></td></tr></table></figure>
+<p>其實可以建立 自訂 console 物件，如有需要可以再呼叫全域的console是沒有問題的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//或是定義別的名稱 ，如此一來就不用每次用完console.log()就把它註解或是砍掉，將isView設定為 false即可。</span><br><span class="line"></span><br><span class="line">let console = &#123;</span><br><span class="line">    isView : true,</span><br><span class="line">    log : function(...args)&#123;</span><br><span class="line">        if(!this.isView) return;</span><br><span class="line">        window.console.log(...args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><p>顯示訊息文字在console上，</p>
+<p>console.log()，參數分別有，字串、整是、物件等，可以使用逗點無限加入參數</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//Interpolated 字串格式 %s, %d, %f, %o</span><br><span class="line">let str = &quot;字串&quot;;</span><br><span class="line">console.log(&apos;String: %s&apos;, str);</span><br><span class="line">let ints = 999;</span><br><span class="line">console.log(&apos;Int: %d&apos;, ints);</span><br><span class="line">let floats = 99.09;</span><br><span class="line">console.log(&apos;Float: %f&apos;, floats);</span><br><span class="line">let obj = &#123;</span><br><span class="line">    a : &apos;apple&apos;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(&apos;Object: %o&apos;, obj);</span><br><span class="line"></span><br><span class="line">或是使用ES6 的 `$&#123;&#125;`</span><br><span class="line">let es6 = &quot;es6&quot;;</span><br><span class="line">console.log(`$&#123;es6&#125;`);</span><br><span class="line"></span><br><span class="line">console.log(&quot;1234&quot;);</span><br><span class="line">=&gt; 1234</span><br><span class="line"></span><br><span class="line">console.log(&quot;我是誰&quot;);</span><br><span class="line">=&gt; 我是誰</span><br></pre></td></tr></table></figure>
+<h3 id="Styled"><a href="#Styled" class="headerlink" title="Styled"></a>Styled</h3><p>console 的訊息字改變樣式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;這邊不會變成紅字%c住手，請勿使用Console&quot;, &quot;Font-size:20px;Color:red&quot;);</span><br><span class="line">//在%c之後的文字，將會套用後面寫的樣式</span><br><span class="line"></span><br><span class="line">//可以看看各家網站的console吧</span><br></pre></td></tr></table></figure>
+<h3 id="warn"><a href="#warn" class="headerlink" title="warn"></a>warn</h3><p>! 警告 warning，可以在程式中標記</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.warn(&quot;Oops 警告&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><p>錯誤 Error，可以在程式中標記 (少用)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.error(&quot;Oops 發生錯誤&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="info"><a href="#info" class="headerlink" title="info"></a>info</h3><p>類似於 log</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.info(&quot;資訊&quot;);</span><br></pre></td></tr></table></figure>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>本身在除蟲都只使用 log 而已，但其他還有很多好用的方法 可以在參考 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console#Using_string_substitutions" target="_blank" rel="noopener">MDN Console</a></p>
 
       
     </div>
@@ -500,7 +482,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Cloud/" rel="tag"># Cloud</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -513,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/inlife/20190523/289845534/" rel="next" title="Hexo 之 MarkDown使用">
-                <i class="fa fa-chevron-left"></i> Hexo 之 MarkDown使用
+              <a href="/inlife/20190524/2417988275/" rel="next" title="圖片儲存空間">
+                <i class="fa fa-chevron-left"></i> 圖片儲存空間
               </a>
             
           </div>
@@ -522,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/JavaScript/20190527/1164161597/" rel="prev" title="實用的 Console">
-                實用的 Console <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -709,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google"><span class="nav-number">2.</span> <span class="nav-text">Google</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-相片"><span class="nav-number">2.1.</span> <span class="nav-text">Google 相片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-雲端硬碟"><span class="nav-number">2.2.</span> <span class="nav-text">Google 雲端硬碟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FireBase"><span class="nav-number">2.3.</span> <span class="nav-text">FireBase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DropBox"><span class="nav-number">3.</span> <span class="nav-text">DropBox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#imgur"><span class="nav-number">4.</span> <span class="nav-text">imgur</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unsplash"><span class="nav-number">5.</span> <span class="nav-text">unsplash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結語"><span class="nav-number">6.</span> <span class="nav-text">結語</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Console"><span class="nav-number">2.</span> <span class="nav-text">Console</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#log"><span class="nav-number">2.1.</span> <span class="nav-text">log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Styled"><span class="nav-number">2.2.</span> <span class="nav-text">Styled</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#warn"><span class="nav-number">2.3.</span> <span class="nav-text">warn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#error"><span class="nav-number">2.4.</span> <span class="nav-text">error</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#info"><span class="nav-number">2.5.</span> <span class="nav-text">info</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結語"><span class="nav-number">3.</span> <span class="nav-text">結語</span></a></li></ol></div>
             
 
           </div>
