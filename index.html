@@ -342,6 +342,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yenin1018.github.io/JavaScript/20190530/56525943/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Song Rob">
+      <meta itemprop="description" content="平凡的生活">
+      <meta itemprop="image" content="/uploads/SKY.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小工程獅 Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/JavaScript/20190530/56525943/" class="post-title-link" itemprop="url">正規式不是簡單好學的-1</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-05-30 21:12:25 / 修改時間：22:51:42" itemprop="dateCreated datePublished" datetime="2019-05-30T21:12:25+08:00">2019-05-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>學習正規式，有人又稱正則式，語法簡單但實際操作又覺得很難，在此從基礎開始學習，透過一些小範例搭配操作，會比較容易記住，開始學習啦。<del>(發現越來越健忘了XD)</del></p>
+<h2 id="宣告起手式"><a href="#宣告起手式" class="headerlink" title="宣告起手式"></a>宣告起手式</h2><p>如何使用正規式呢，有兩種方法可以實現，</p>
+<ul>
+<li>直接使用雙斜線，如 ( /裡面寫正規語法/ )</li>
+<li>使用建構式 RegExp() ，new 出一個實例，<code>切記不用加斜線</code>，如 new RegExp(“裡面寫正規語法”);</li>
+</ul>
+<h2 id="線上網站模擬使用"><a href="#線上網站模擬使用" class="headerlink" title="線上網站模擬使用"></a>線上網站模擬使用</h2><ul>
+<li>Chrome Devtools Console</li>
+<li><a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a></li>
+</ul>
+<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>在用途是有很多種，先列出幾種常見方式，字串取代、表單驗證、搜尋．．．等等</p>
+<p>在正規式下有好幾種方法(method)可以使用，先來使用<code>test()</code>此為測試，回傳為布林(Boolean)。</p>
+<p>找到回傳 <code>true</code> ，否則為 <code>false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/a/.test(&quot;this is an apple&quot;);</span><br><span class="line"></span><br><span class="line">//這段小範例表達這字串裡含有a嗎？</span><br><span class="line">=&gt; 回傳: true (是有的)</span><br><span class="line"></span><br><span class="line">/c/.test(&quot;this is a apple&quot;);</span><br><span class="line"></span><br><span class="line">//這字串裡含有c嗎？</span><br><span class="line">=&gt; 回傳: false (找不到)</span><br></pre></td></tr></table></figure>
+<h3 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h3><p>取代，傳統再用replace時，都是使用字串來做替換使用，但這邊需要注意的點是，字串在使用replace時，如果找兩個或以上相同字時，只會取代第一個，以前以為會取代多個(其他語言…)，在這是使用JS來做操做，先來看看小例子吧。</p>
+<p>Replace方法使用，有兩個參數</p>
+<ul>
+<li>被取代的字串 或是 正規式</li>
+<li>替換的字串 或是 一個 function</li>
+</ul>
+<p>更多請參考 <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="noopener">MDN Replace</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">console.log( &quot;this is a book&quot;.replace(&quot;is&quot;, &quot;__&quot;) );</span><br><span class="line">=&gt; th__ is a book (只會替換一個)</span><br><span class="line"></span><br><span class="line">如果是使用正規呢</span><br><span class="line"></span><br><span class="line">console.log( &quot;this is a book&quot;.replace( /is/ , &quot;__&quot;) );</span><br><span class="line">=&gt; th__ is a book (也是一樣)，其實是少加一個旗標參數</span><br><span class="line">那參數是加在雙斜線外面，有 g (全域尋找) 、 i (不分大小寫) 、 m (多行搜尋)</span><br><span class="line"></span><br><span class="line">console.log( &quot;this is a book&quot;.replace( /is/g , &quot;__&quot;) );</span><br><span class="line">=&gt; th__ __ a book (成功了)</span><br></pre></td></tr></table></figure>
+<h2 id="下回待續"><a href="#下回待續" class="headerlink" title="下回待續"></a>下回待續</h2><p>下篇在繼續學習！</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yenin1018.github.io/JavaScript/20190527/1164161597/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -387,12 +570,24 @@
                 
               
 
-              <time title="創建時間：2019-05-27 22:23:03 / 修改時間：23:52:53" itemprop="dateCreated datePublished" datetime="2019-05-27T22:23:03+08:00">2019-05-27</time>
+              <time title="創建時間：2019-05-27 22:23:03" itemprop="dateCreated datePublished" datetime="2019-05-27T22:23:03+08:00">2019-05-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2019-05-30 22:47:54" itemprop="dateModified" datetime="2019-05-30T22:47:54+08:00">2019-05-30</time>
               
             
           </span>
@@ -1064,7 +1259,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1110,7 +1305,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">標籤</span>
                   </a>
                 </div>

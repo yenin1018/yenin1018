@@ -100,24 +100,18 @@
 
 
 
-  <meta name="description" content="前言網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧">
-<meta name="keywords" content="Cloud">
+  <meta name="description" content="前言學習正規式，有人又稱正則式，語法簡單但實際操作又覺得很難，在此從基礎開始學習，透過一些小範例搭配操作，會比較容易記住，開始學習啦。(發現越來越健忘了XD) 宣告起手式如何使用正規式呢，有兩種方法可以實現，  直接使用雙斜線，如 ( /裡面寫正規語法/ ) 使用建構式 RegExp() ，new 出一個實例，切記不用加斜線，如 new RegExp(“裡面寫正規語法”);  線上網站模擬使用 C">
+<meta name="keywords" content="JS,RegExp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="圖片儲存空間">
-<meta property="og:url" content="https://yenin1018.github.io/inlife/20190524/2417988275/index.html">
+<meta property="og:title" content="正規式不是簡單好學的-1">
+<meta property="og:url" content="https://yenin1018.github.io/JavaScript/20190530/56525943/index.html">
 <meta property="og:site_name" content="小小工程獅 Blog">
-<meta property="og:description" content="前言網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧">
+<meta property="og:description" content="前言學習正規式，有人又稱正則式，語法簡單但實際操作又覺得很難，在此從基礎開始學習，透過一些小範例搭配操作，會比較容易記住，開始學習啦。(發現越來越健忘了XD) 宣告起手式如何使用正規式呢，有兩種方法可以實現，  直接使用雙斜線，如 ( /裡面寫正規語法/ ) 使用建構式 RegExp() ，new 出一個實例，切記不用加斜線，如 new RegExp(“裡面寫正規語法”);  線上網站模擬使用 C">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:image" content="https://lh3.googleusercontent.com/YO_nc2eK75HExoRNHc63-xEHhxcFAKYoGxZxH_nSVJ0sJLPw4Z411Fy3JeK_9jtyuBRzmlwW_cIy6rVtwh4ubR3RMqPXERWi8L5cxzh4kk2Hwyvh6fn6kmJCupfsnwe2r9k5hTRz9N-Gqp7XSmhvD_vLeKW_HoiR3bU2vuGiCWaCxOQkQmhx9RfUEuDsTKWCl6VdD4Ux6xhDa9YqEGEGLLSbwz7ls6QeVnCBWEJb_6roaPrXuydD29l2rfsi_S01eq-HBiymlBFy0ABWypP4oaIf4joZNXWcHJxUYBk8AJLqnVRk4m9jtuBG4r553tepRT-AzB7dml3grr1XkLeZB_e83TLzvF8rafm47nWyFyA_V_ADthys6jw53_tBO36j04BjiL2oU0ybyn5NAOItezonH58bZDRNE9QfmyHuPDrfxISmOuy5x2kPVJ2BOsOr3ZDIfbYwMWrtiNNxwPF1EFZocijUslfbLcKqBgE6dTt1U9u7qvyY7ndQZQRq5WoSE4-3czOl0cZnok0YjukLPo9pDfOay349YN1U-iihA_xIywvZxVjSgT6eZuIf7pRIHI_oalR34ueKOpreKg-_b0pCBWkMprqFohbBFtKCLeSrWZ7uyhedzZmvym623lsWN4XW83dlEZQHiCn70Jn8j0fMlsfjiQQ=w182-h242-no">
-<meta property="og:image" content="https://drive.google.com/uc?export=view&id=1LmB_EI_NLrH8PFALkcz6Y2BpafWQ4Q8L">
-<meta property="og:image" content="https://www.dropbox.com/s/l7wy89hmqh13sw6/IMG_0244.jpg?dl=1">
-<meta property="og:image" content="https://i.imgur.com/WejszZq.png">
-<meta property="og:image" content="https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
-<meta property="og:updated_time" content="2019-05-24T15:17:13.106Z">
+<meta property="og:updated_time" content="2019-05-30T14:51:42.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="圖片儲存空間">
-<meta name="twitter:description" content="前言網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧">
-<meta name="twitter:image" content="https://lh3.googleusercontent.com/YO_nc2eK75HExoRNHc63-xEHhxcFAKYoGxZxH_nSVJ0sJLPw4Z411Fy3JeK_9jtyuBRzmlwW_cIy6rVtwh4ubR3RMqPXERWi8L5cxzh4kk2Hwyvh6fn6kmJCupfsnwe2r9k5hTRz9N-Gqp7XSmhvD_vLeKW_HoiR3bU2vuGiCWaCxOQkQmhx9RfUEuDsTKWCl6VdD4Ux6xhDa9YqEGEGLLSbwz7ls6QeVnCBWEJb_6roaPrXuydD29l2rfsi_S01eq-HBiymlBFy0ABWypP4oaIf4joZNXWcHJxUYBk8AJLqnVRk4m9jtuBG4r553tepRT-AzB7dml3grr1XkLeZB_e83TLzvF8rafm47nWyFyA_V_ADthys6jw53_tBO36j04BjiL2oU0ybyn5NAOItezonH58bZDRNE9QfmyHuPDrfxISmOuy5x2kPVJ2BOsOr3ZDIfbYwMWrtiNNxwPF1EFZocijUslfbLcKqBgE6dTt1U9u7qvyY7ndQZQRq5WoSE4-3czOl0cZnok0YjukLPo9pDfOay349YN1U-iihA_xIywvZxVjSgT6eZuIf7pRIHI_oalR34ueKOpreKg-_b0pCBWkMprqFohbBFtKCLeSrWZ7uyhedzZmvym623lsWN4XW83dlEZQHiCn70Jn8j0fMlsfjiQQ=w182-h242-no">
+<meta name="twitter:title" content="正規式不是簡單好學的-1">
+<meta name="twitter:description" content="前言學習正規式，有人又稱正則式，語法簡單但實際操作又覺得很難，在此從基礎開始學習，透過一些小範例搭配操作，會比較容易記住，開始學習啦。(發現越來越健忘了XD) 宣告起手式如何使用正規式呢，有兩種方法可以實現，  直接使用雙斜線，如 ( /裡面寫正規語法/ ) 使用建構式 RegExp() ，new 出一個實例，切記不用加斜線，如 new RegExp(“裡面寫正規語法”);  線上網站模擬使用 C">
 
 
 
@@ -125,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://yenin1018.github.io/inlife/20190524/2417988275/">
+  <link rel="canonical" href="https://yenin1018.github.io/JavaScript/20190530/56525943/">
 
 
 
@@ -135,7 +129,7 @@
   };
 </script>
 
-  <title>圖片儲存空間 | 小小工程獅 Blog</title>
+  <title>正規式不是簡單好學的-1 | 小小工程獅 Blog</title>
   
 
 
@@ -348,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yenin1018.github.io/inlife/20190524/2417988275/">
+    <link itemprop="mainEntityOfPage" href="https://yenin1018.github.io/JavaScript/20190530/56525943/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Song Rob">
@@ -365,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">圖片儲存空間
+          <h1 class="post-title" itemprop="name headline">正規式不是簡單好學的-1
 
               
             
@@ -391,7 +385,7 @@
                 
               
 
-              <time title="創建時間：2019-05-24 20:54:30 / 修改時間：23:17:13" itemprop="dateCreated datePublished" datetime="2019-05-24T20:54:30+08:00">2019-05-24</time>
+              <time title="創建時間：2019-05-30 21:12:25 / 修改時間：22:51:42" itemprop="dateCreated datePublished" datetime="2019-05-30T21:12:25+08:00">2019-05-30</time>
             
 
             
@@ -413,7 +407,7 @@
                 <span class="post-meta-item-text">分類於</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/inlife/" itemprop="url" rel="index"><span itemprop="name">生活記事</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
 
                 
                 
@@ -448,35 +442,29 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>網路上很多雲端空間，如果要開始建立HEXO筆記，就需要存放圖的的地方或使用免費圖檔的網站，就先來紀錄自己常用的空間吧<br><a id="more"></a></p>
-<h2 id="Google"><a href="#Google" class="headerlink" title="Google"></a>Google</h2><p>存放在Google雲端上，空間限制最多只有15GB。</p>
-<h3 id="Google-相片"><a href="#Google-相片" class="headerlink" title="Google 相片"></a>Google 相片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">點選一張圖片，按滑鼠右鍵選擇複製圖片位置即可</span><br></pre></td></tr></table></figure>
-<p><img src="https://lh3.googleusercontent.com/YO_nc2eK75HExoRNHc63-xEHhxcFAKYoGxZxH_nSVJ0sJLPw4Z411Fy3JeK_9jtyuBRzmlwW_cIy6rVtwh4ubR3RMqPXERWi8L5cxzh4kk2Hwyvh6fn6kmJCupfsnwe2r9k5hTRz9N-Gqp7XSmhvD_vLeKW_HoiR3bU2vuGiCWaCxOQkQmhx9RfUEuDsTKWCl6VdD4Ux6xhDa9YqEGEGLLSbwz7ls6QeVnCBWEJb_6roaPrXuydD29l2rfsi_S01eq-HBiymlBFy0ABWypP4oaIf4joZNXWcHJxUYBk8AJLqnVRk4m9jtuBG4r553tepRT-AzB7dml3grr1XkLeZB_e83TLzvF8rafm47nWyFyA_V_ADthys6jw53_tBO36j04BjiL2oU0ybyn5NAOItezonH58bZDRNE9QfmyHuPDrfxISmOuy5x2kPVJ2BOsOr3ZDIfbYwMWrtiNNxwPF1EFZocijUslfbLcKqBgE6dTt1U9u7qvyY7ndQZQRq5WoSE4-3czOl0cZnok0YjukLPo9pDfOay349YN1U-iihA_xIywvZxVjSgT6eZuIf7pRIHI_oalR34ueKOpreKg-_b0pCBWkMprqFohbBFtKCLeSrWZ7uyhedzZmvym623lsWN4XW83dlEZQHiCn70Jn8j0fMlsfjiQQ=w182-h242-no" alt="Google 相片"></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>學習正規式，有人又稱正則式，語法簡單但實際操作又覺得很難，在此從基礎開始學習，透過一些小範例搭配操作，會比較容易記住，開始學習啦。<del>(發現越來越健忘了XD)</del></p>
+<h2 id="宣告起手式"><a href="#宣告起手式" class="headerlink" title="宣告起手式"></a>宣告起手式</h2><p>如何使用正規式呢，有兩種方法可以實現，</p>
 <ul>
-<li>連結 <a href="https://www.google.com/photos/about/" target="_blank" rel="noopener">https://www.google.com/photos/about/</a></li>
+<li>直接使用雙斜線，如 ( /裡面寫正規語法/ )</li>
+<li>使用建構式 RegExp() ，new 出一個實例，<code>切記不用加斜線</code>，如 new RegExp(“裡面寫正規語法”);</li>
 </ul>
-<h3 id="Google-雲端硬碟"><a href="#Google-雲端硬碟" class="headerlink" title="Google 雲端硬碟"></a>Google 雲端硬碟</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">小知識：</span><br><span class="line"></span><br><span class="line">如要在雲端硬碟上使用圖檔，需再此圖檔開啟共用，並開啟連結共用設定，會得到一串網址</span><br><span class="line">，網址上有 /d/21e12..e21e1.. ，在 d/ 後會有一串 ID ，將ID貼入至底下連結即可使用。</span><br><span class="line"></span><br><span class="line">或是 共用網址為 </span><br><span class="line">https://drive.google.com/open?id=1LmB_EI_Ndasda.... 即 ID 為等號後面</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">https://drive.google.com/uc?export=view&amp;id=&#123;id&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1LmB_EI_NLrH8PFALkcz6Y2BpafWQ4Q8L" alt="Google 雲端硬碟"></p>
+<h2 id="線上網站模擬使用"><a href="#線上網站模擬使用" class="headerlink" title="線上網站模擬使用"></a>線上網站模擬使用</h2><ul>
+<li>Chrome Devtools Console</li>
+<li><a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a></li>
+</ul>
+<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>在用途是有很多種，先列出幾種常見方式，字串取代、表單驗證、搜尋．．．等等</p>
+<p>在正規式下有好幾種方法(method)可以使用，先來使用<code>test()</code>此為測試，回傳為布林(Boolean)。</p>
+<p>找到回傳 <code>true</code> ，否則為 <code>false</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/a/.test(&quot;this is an apple&quot;);</span><br><span class="line"></span><br><span class="line">//這段小範例表達這字串裡含有a嗎？</span><br><span class="line">=&gt; 回傳: true (是有的)</span><br><span class="line"></span><br><span class="line">/c/.test(&quot;this is a apple&quot;);</span><br><span class="line"></span><br><span class="line">//這字串裡含有c嗎？</span><br><span class="line">=&gt; 回傳: false (找不到)</span><br></pre></td></tr></table></figure>
+<h3 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h3><p>取代，傳統再用replace時，都是使用字串來做替換使用，但這邊需要注意的點是，字串在使用replace時，如果找兩個或以上相同字時，只會取代第一個，以前以為會取代多個(其他語言…)，在這是使用JS來做操做，先來看看小例子吧。</p>
+<p>Replace方法使用，有兩個參數</p>
 <ul>
-<li>連結 <a href="https://drive.google.com/" target="_blank" rel="noopener">https://drive.google.com/</a></li>
+<li>被取代的字串 或是 正規式</li>
+<li>替換的字串 或是 一個 function</li>
 </ul>
-<h3 id="FireBase"><a href="#FireBase" class="headerlink" title="FireBase"></a>FireBase</h3><p>空間相較小提供 1 Gib，但功能相當多</p>
-<ul>
-<li>連結 <a href="https://firebase.google.com/" target="_blank" rel="noopener">https://firebase.google.com/</a></li>
-</ul>
-<h2 id="DropBox"><a href="#DropBox" class="headerlink" title="DropBox"></a>DropBox</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">小知識：</span><br><span class="line">選擇圖檔案右鍵選擇共享，建立連結之後選複製連結，會看到一串網址，如下</span><br><span class="line">(https://www.dropbox.com/s/l7wy89hmqh13sw6/IMG_0244.jpg?dl=0)</span><br><span class="line"></span><br><span class="line">在最後有個`dl=0` 改為 `dl=1` 就可以顯示圖囉。</span><br></pre></td></tr></table></figure>
-<p><img src="https://www.dropbox.com/s/l7wy89hmqh13sw6/IMG_0244.jpg?dl=1" alt="Dropbox"></p>
-<h2 id="imgur"><a href="#imgur" class="headerlink" title="imgur"></a>imgur</h2><p>是一家美國的免費圖片上傳空間，上傳圖檔上去，會附有超連結供使用，是個不錯用的網站</p>
-<p><img src="https://i.imgur.com/WejszZq.png" alt="Imgur"></p>
-<ul>
-<li>連結 <a href="https://imgur.com/" target="_blank" rel="noopener">https://imgur.com/</a></li>
-</ul>
-<h2 id="unsplash"><a href="#unsplash" class="headerlink" title="unsplash"></a>unsplash</h2><p>在 <a href="https://unsplash.com" title="unsplash" target="_blank" rel="noopener">unsplash</a> 上的圖檔都可以免費使用(商用或非商用)，如有使用疑慮也可參考授權方式 <a href="https://unsplash.com/license" target="_blank" rel="noopener">https://unsplash.com/license</a></p>
-<p><img src="https://images.unsplash.com/photo-1555231955-348aa2312e19?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Photo by Mi Min on Unsplash"></p>
-<ul>
-<li>連結 <a href="https://unsplash.com" target="_blank" rel="noopener">https://unsplash.com</a></li>
-</ul>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>依照個人喜好去上傳檔案吧</p>
+<p>更多請參考 <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="noopener">MDN Replace</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">console.log( &quot;this is a book&quot;.replace(&quot;is&quot;, &quot;__&quot;) );</span><br><span class="line">=&gt; th__ is a book (只會替換一個)</span><br><span class="line"></span><br><span class="line">如果是使用正規呢</span><br><span class="line"></span><br><span class="line">console.log( &quot;this is a book&quot;.replace( /is/ , &quot;__&quot;) );</span><br><span class="line">=&gt; th__ is a book (也是一樣)，其實是少加一個旗標參數</span><br><span class="line">那參數是加在雙斜線外面，有 g (全域尋找) 、 i (不分大小寫) 、 m (多行搜尋)</span><br><span class="line"></span><br><span class="line">console.log( &quot;this is a book&quot;.replace( /is/g , &quot;__&quot;) );</span><br><span class="line">=&gt; th__ __ a book (成功了)</span><br></pre></td></tr></table></figure>
+<h2 id="下回待續"><a href="#下回待續" class="headerlink" title="下回待續"></a>下回待續</h2><p>下篇在繼續學習！</p>
 
       
     </div>
@@ -500,7 +488,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Cloud/" rel="tag"># Cloud</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+            <a href="/tags/RegExp/" rel="tag"># RegExp</a>
           
         </div>
       
@@ -513,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/inlife/20190523/289845534/" rel="next" title="Hexo 之 MarkDown使用">
-                <i class="fa fa-chevron-left"></i> Hexo 之 MarkDown使用
+              <a href="/JavaScript/20190527/1164161597/" rel="next" title="實用的 Console">
+                <i class="fa fa-chevron-left"></i> 實用的 Console
               </a>
             
           </div>
@@ -522,10 +512,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/JavaScript/20190527/1164161597/" rel="prev" title="實用的 Console">
-                實用的 Console <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -711,7 +697,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google"><span class="nav-number">2.</span> <span class="nav-text">Google</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-相片"><span class="nav-number">2.1.</span> <span class="nav-text">Google 相片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-雲端硬碟"><span class="nav-number">2.2.</span> <span class="nav-text">Google 雲端硬碟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FireBase"><span class="nav-number">2.3.</span> <span class="nav-text">FireBase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DropBox"><span class="nav-number">3.</span> <span class="nav-text">DropBox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#imgur"><span class="nav-number">4.</span> <span class="nav-text">imgur</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unsplash"><span class="nav-number">5.</span> <span class="nav-text">unsplash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#結語"><span class="nav-number">6.</span> <span class="nav-text">結語</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宣告起手式"><span class="nav-number">2.</span> <span class="nav-text">宣告起手式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#線上網站模擬使用"><span class="nav-number">3.</span> <span class="nav-text">線上網站模擬使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用途"><span class="nav-number">4.</span> <span class="nav-text">用途</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Replace"><span class="nav-number">4.1.</span> <span class="nav-text">Replace</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下回待續"><span class="nav-number">5.</span> <span class="nav-text">下回待續</span></a></li></ol></div>
             
 
           </div>
